@@ -73,14 +73,33 @@ class Fullcalendar extends CI_Controller {
 	function load_home()
 	{
 		$event_data = $this->fullcalendar_model->fetch_all_event_home();
-		foreach($event_data->result_array() as $row)
+		$color = [
+			'SMK' => '#ffc107',
+			'Universitas' => '#28a745',
+			'SMA/MA' => '#007bff'
+		];
+
+		foreach($event_data->result_array() as $key=>$row)
 		{
 			$data[] = array(
 				'id'	=>	$row['id'],
 				'title'	=>	$row['nama'],
 				'start'	=>	$row['mulai'],
-				'end'	=>	$row['akhir']
+				'end'	=>	$row['akhir'],
 			);
+
+			if($row['pendidikan'] == 'SMK')
+			{
+				$data[$key]['backgroundColor'] = $color['SMK'];
+			}
+			else if($row['pendidikan'] == 'Universitas')
+			{
+				$data[$key]['backgroundColor'] = $color['Universitas'];
+			}
+			else if($row['pendidikan'] == 'rr')
+			{
+				$data[$key]['backgroundColor'] = $color['rr'];
+			}
 		}
 		echo json_encode($data);
 	}
