@@ -46,7 +46,7 @@ class Data_model extends CI_Model{
 	public function cari_data()
 	{
 		$cari = $this->input->GET('cari', TRUE);
-		$data2 = $this->db->query("SELECT * FROM permohonan where email like '$cari'");
+		$data2 = $this->db->query("SELECT * FROM permohonan where email like '$cari' OR notelp like '$cari'");
 		return $data2;
 	}
 

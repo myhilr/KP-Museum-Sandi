@@ -96,9 +96,9 @@ class Fullcalendar extends CI_Controller {
 			{
 				$data[$key]['backgroundColor'] = $color['Universitas'];
 			}
-			else if($row['pendidikan'] == 'rr')
+			else if($row['pendidikan'] == 'SMA/MA')
 			{
-				$data[$key]['backgroundColor'] = $color['rr'];
+				$data[$key]['backgroundColor'] = $color['SMA/MA'];
 			}
 		}
 		echo json_encode($data);
