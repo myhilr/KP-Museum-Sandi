@@ -9,7 +9,7 @@ class Data_model extends CI_Model{
 
 	function tampil_data_jadwal(){
 
-		$hasil2=$this->db->query("SELECT jadwal.id,jadwal.id_permohonan,jadwal.tanggal_approve,permohonan.tgl,permohonan.asal,permohonan.nama,permohonan.asal,permohonan.email,permohonan.notelp,permohonan.surat,permohonan.surat,permohonan.cv,permohonan.pendidikan,permohonan.jurusan,permohonan.mulai,permohonan.akhir,permohonan.status  FROM jadwal JOIN permohonan ON permohonan.id=jadwal.id_permohonan");
+		$hasil2=$this->db->query("SELECT jadwal.id,jadwal.id_permohonan,jadwal.tanggal_approve,permohonan.tgl,permohonan.asal,permohonan.nama,permohonan.asal,permohonan.email,permohonan.notelp,permohonan.surat,permohonan.surat,permohonan.cv,permohonan.pendidikan,permohonan.jurusan,permohonan.fakultas,permohonan.nim,permohonan.mulai,permohonan.akhir,permohonan.status  FROM jadwal JOIN permohonan ON permohonan.id=jadwal.id_permohonan");
         return $hasil2;
 	}
 

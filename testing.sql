@@ -74,6 +74,8 @@ CREATE TABLE `permohonan` (
   `tgl` datetime NOT NULL,
   `asal` varchar(255) NOT NULL,
   `nama` varchar(255) NOT NULL,
+  `nim` varchar(255) NOT NULL,
+  `fakultas` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `notelp` varchar(255) NOT NULL,
   `surat` varchar(255) NOT NULL,

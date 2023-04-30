@@ -25,22 +25,22 @@ class Fullcalendar_model extends CI_Model
 	}
 
 	function fetch_all_event_home(){
-		$jadwal=$this->db->query("SELECT jadwal.id, jadwal.id_permohonan, permohonan.tgl , permohonan.asal , permohonan.nama , permohonan.email , permohonan.notelp , permohonan.surat , permohonan.pendidikan , permohonan.mulai , permohonan.akhir , permohonan.status  FROM jadwal JOIN permohonan ON permohonan.id=jadwal.id_permohonan");
+		$jadwal=$this->db->query("SELECT jadwal.id, jadwal.id_permohonan, permohonan.tgl , permohonan.asal , permohonan.nama , permohonan.email , permohonan.notelp ,permohonan.fakultas, permohonan.nim, permohonan.surat , permohonan.pendidikan , permohonan.mulai , permohonan.akhir , permohonan.status  FROM jadwal JOIN permohonan ON permohonan.id=jadwal.id_permohonan");
 		return $jadwal;
 	}
 
 	function fetch_all_event_act(){
-		$jadwal=$this->db->query("SELECT jadwal.id, jadwal.id_permohonan, permohonan.tgl , permohonan.asal , permohonan.nama , permohonan.email , permohonan.notelp , permohonan.surat , permohonan.pendidikan , permohonan.mulai , permohonan.akhir , permohonan.status  FROM jadwal JOIN permohonan ON permohonan.id=jadwal.id_permohonan WHERE permohonan.pendidikan='SMA/MA'");
+		$jadwal=$this->db->query("SELECT jadwal.id, jadwal.id_permohonan, permohonan.tgl , permohonan.asal , permohonan.nama , permohonan.email , permohonan.notelp , permohonan.surat , permohonan.pendidikan, permohonan.fakultas, permohonan.nim , permohonan.mulai , permohonan.akhir , permohonan.status  FROM jadwal JOIN permohonan ON permohonan.id=jadwal.id_permohonan WHERE permohonan.pendidikan='SMA/MA'");
 		return $jadwal;
 	}
 
 	function fetch_all_event_pkk(){
-		$jadwal=$this->db->query("SELECT jadwal.id, jadwal.id_permohonan, permohonan.tgl , permohonan.asal , permohonan.nama , permohonan.email , permohonan.notelp , permohonan.surat , permohonan.pendidikan , permohonan.mulai , permohonan.akhir , permohonan.status  FROM jadwal JOIN permohonan ON permohonan.id=jadwal.id_permohonan WHERE permohonan.pendidikan='SMK'");
+		$jadwal=$this->db->query("SELECT jadwal.id, jadwal.id_permohonan, permohonan.tgl , permohonan.asal , permohonan.nama , permohonan.email , permohonan.notelp , permohonan.surat , permohonan.pendidikan ,permohonan.fakultas, permohonan.nim , permohonan.mulai , permohonan.akhir , permohonan.status  FROM jadwal JOIN permohonan ON permohonan.id=jadwal.id_permohonan WHERE permohonan.pendidikan='SMK'");
 		return $jadwal;
 	}
 
 	function fetch_all_event_rr(){
-		$jadwal=$this->db->query("SELECT jadwal.id, jadwal.id_permohonan, permohonan.tgl , permohonan.asal , permohonan.nama , permohonan.email , permohonan.notelp , permohonan.surat , permohonan.pendidikan , permohonan.mulai , permohonan.akhir , permohonan.status  FROM jadwal JOIN permohonan ON permohonan.id=jadwal.id_permohonan WHERE permohonan.pendidikan='Universitas'");
+		$jadwal=$this->db->query("SELECT jadwal.id, jadwal.id_permohonan, permohonan.tgl , permohonan.asal , permohonan.nama , permohonan.email , permohonan.notelp , permohonan.surat , permohonan.pendidikan ,permohonan.fakultas, permohonan.nim , permohonan.mulai , permohonan.akhir , permohonan.status  FROM jadwal JOIN permohonan ON permohonan.id=jadwal.id_permohonan WHERE permohonan.pendidikan='Universitas'");
 		return $jadwal;
 	}
 

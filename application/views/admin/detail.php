@@ -27,22 +27,6 @@
                                                 <td>: <?= $j['nama']; ?></td>
                                             </tr>
                                             <tr>
-                                                <th>Asal Sekolah/ Universitas</th>
-                                                <td>: <?= $j['asal']; ?></td>
-                                            </tr>
-                                            <tr>
-                                                <th>Email Pemohon</th>
-                                                <td>: <?= $j['email']; ?></td>
-                                            </tr>
-                                            <tr>
-                                                <th>No Telepon</th>
-                                                <td>: <?= $j['notelp']; ?></td>
-                                            </tr>
-                                            <tr>
-                                                <th>Tanggal Pengajuan</th>
-                                                <td>: <?= $j['tgl']; ?></td>
-                                            </tr>
-                                            <tr>
                                                 <th>pendidikan </th>
                                                 <td><?php
                                                     if($j['pendidikan']=='SMA/MA'){ 
@@ -66,6 +50,34 @@
 
                                                         }
                                                 ?></td>
+                                            </tr>
+                                            <tr>
+                                                <th>Asal Sekolah/ Universitas</th>
+                                                <td>: <?= $j['asal']; ?></td>
+                                            </tr>
+                                            <tr>
+                                                <th>Fakultas</th>
+                                                <td>: <?= $j['fakultas']; ?></td>
+                                            </tr>
+                                            <tr>
+                                                <th>Jurusan</th>
+                                                <td>: <?= $j['jurusan']; ?></td>
+                                            </tr>
+                                            <tr>
+                                                <th>NIM/ NIS</th>
+                                                <td>: <?= $j['nim']; ?></td>
+                                            </tr>
+                                            <tr>
+                                                <th>Email Pemohon</th>
+                                                <td>: <?= $j['email']; ?></td>
+                                            </tr>
+                                            <tr>
+                                                <th>No Telepon</th>
+                                                <td>: <?= $j['notelp']; ?></td>
+                                            </tr>
+                                            <tr>
+                                                <th>Tanggal Pengajuan</th>
+                                                <td>: <?= $j['tgl']; ?></td>
                                             </tr>
                                             <tr>
                                                 <th>Tanggal Mulai</th>
