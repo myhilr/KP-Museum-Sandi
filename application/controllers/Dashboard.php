@@ -142,7 +142,7 @@ class Dashboard extends CI_Controller {
 		$pengajuan[0]['status'] = 1;
 		$data['jadwal'] = $this->data_model->tampil_data_jadwal()->result_array();
 
-		if($this->upload->do_upload('surat_balasan')) 
+		if($this->upload->do_upload('surat_balasan'))
         {
                 $file_surat_balasan = $this->upload->data();
 
@@ -246,7 +246,7 @@ class Dashboard extends CI_Controller {
             //     $this->session->set_flashdata('error', $this->upload->display_errors());
             //     redirect(base_url('dashboard'));
             // }
-        }       
+        }
     }
 
     public function decline($id)
@@ -409,14 +409,17 @@ class Dashboard extends CI_Controller {
         $spreadsheet->setActiveSheetIndex(0)
         ->setCellValue('A1', 'NO.')
         ->setCellValue('B1', 'TANGGAL PENGAJUAN')
-        ->setCellValue('G1', 'PENDIDIKAN')
-        ->setCellValue('H1', 'Asal Sekolah/ Universitas')
-        ->setCellValue('F1', 'NAMA')
-        ->setCellValue('I1', 'EMAIL')
-        ->setCellValue('J1', 'NO. TELEPON')
+        ->setCellValue('C1', 'TANGGAL DITERIMA')
         ->setCellValue('D1', 'TANGGAL Mulai')
         ->setCellValue('E1', 'TANGGAL Berakhir')
-        ->setCellValue('C1', 'TANGGAL DITERIMA')
+        ->setCellValue('F1', 'NAMA')
+        ->setCellValue('G1', 'PENDIDIKAN')
+        ->setCellValue('H1', 'Asal Sekolah/ Universitas')
+        ->setCellValue('I1', 'Fakultas')
+        ->setCellValue('J1', 'Jurusan')
+        ->setCellValue('K1', 'NIM')
+        ->setCellValue('L1', 'EMAIL')
+        ->setCellValue('M1', 'NO. TELEPON')
         ;
 
         // Miscellaneous glyphs, UTF-8
@@ -425,14 +428,17 @@ class Dashboard extends CI_Controller {
         $spreadsheet->setActiveSheetIndex(0)
         ->setCellValue('A'.$i, $j)
         ->setCellValue('B'.$i, $sp->tgl)
-        ->setCellValue('G'.$i, $sp->pendidikan)
-        ->setCellValue('H'.$i, $sp->asal)
-        ->setCellValue('F'.$i, $sp->nama)
-        ->setCellValue('I'.$i, $sp->email)
-        ->setCellValue('J'.$i, $sp->notelp)
+        ->setCellValue('C'.$i, $sp->tanggal_approve)
         ->setCellValue('D'.$i, $sp->mulai)
         ->setCellValue('E'.$i, $sp->akhir)
-        ->setCellValue('C'.$i, $sp->tanggal_approve)
+        ->setCellValue('F'.$i, $sp->nama)
+        ->setCellValue('G'.$i, $sp->asal)
+        ->setCellValue('H'.$i, $sp->pendidikan)
+        ->setCellValue('I'.$i, $sp->fakultas)
+        ->setCellValue('J'.$i, $sp->jurusan)
+        ->setCellValue('K'.$i, $sp->nim)
+        ->setCellValue('L'.$i, $sp->email)
+        ->setCellValue('M'.$i, $sp->notelp)
         ;
         $j++;
         $i++;
@@ -474,30 +480,36 @@ class Dashboard extends CI_Controller {
         $spreadsheet->setActiveSheetIndex(0)
         ->setCellValue('A1', 'NO.')
         ->setCellValue('B1', 'TANGGAL PENGAJUAN')
-        ->setCellValue('G1', 'PENDIDIKAN')
-        ->setCellValue('H1', 'Asal Sekolah/ Universitas')
-        ->setCellValue('F1', 'NAMA')
-        ->setCellValue('I1', 'EMAIL')
-        ->setCellValue('J1', 'NO. TELEPON')
+        ->setCellValue('C1', 'TANGGAL DITERIMA')
         ->setCellValue('D1', 'TANGGAL Mulai')
         ->setCellValue('E1', 'TANGGAL Berakhir')
-        ->setCellValue('C1', 'TANGGAL DITERIMA')
+        ->setCellValue('F1', 'NAMA')
+        ->setCellValue('G1', 'PENDIDIKAN')
+        ->setCellValue('H1', 'Asal Sekolah/ Universitas')
+        ->setCellValue('I1', 'Fakultas')
+        ->setCellValue('J1', 'Jurusan')
+        ->setCellValue('K1', 'NIM')
+        ->setCellValue('L1', 'EMAIL')
+        ->setCellValue('M1', 'NO. TELEPON')
         ;
 
         // Miscellaneous glyphs, UTF-8
         $i=2; $j=1;foreach($sp as $sp) {
 
         $spreadsheet->setActiveSheetIndex(0)
-        ->setCellValue('A'.$i, $j)
+     	->setCellValue('A'.$i, $j)
         ->setCellValue('B'.$i, $sp->tgl)
-        ->setCellValue('G'.$i, $sp->pendidikan)
-        ->setCellValue('H'.$i, $sp->asal)
-        ->setCellValue('F'.$i, $sp->nama)
-        ->setCellValue('I'.$i, $sp->email)
-        ->setCellValue('J'.$i, $sp->notelp)
+        ->setCellValue('C'.$i, $sp->tanggal_approve)
         ->setCellValue('D'.$i, $sp->mulai)
         ->setCellValue('E'.$i, $sp->akhir)
-        ->setCellValue('C'.$i, $sp->tanggal_approve)
+        ->setCellValue('F'.$i, $sp->nama)
+        ->setCellValue('G'.$i, $sp->asal)
+        ->setCellValue('H'.$i, $sp->pendidikan)
+        ->setCellValue('I'.$i, $sp->fakultas)
+        ->setCellValue('J'.$i, $sp->jurusan)
+        ->setCellValue('K'.$i, $sp->nim)
+        ->setCellValue('L'.$i, $sp->email)
+        ->setCellValue('M'.$i, $sp->notelp)
         ;
         $j++;
         $i++;
