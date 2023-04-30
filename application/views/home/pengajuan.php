@@ -130,8 +130,16 @@
                                 <input type="text" class="form-control" id="asal" name="asal" required>
                             </div>
                             <div class="form-group">
+                                <label for="exampleFormControlInput1">Fakultas <label class="text-danger">*</label></label> 
+                                <input type="text" class="form-control" id="fakultas" name="fakultas" required>
+                            </div>
+                            <div class="form-group">
                                 <label for="exampleFormControlInput1">Jurusan <label class="text-danger">*</label></label> 
                                 <input type="text" class="form-control" id="jurusan" name="jurusan" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleFormControlInput1">NIM/ NIS <label class="text-danger">*</label></label> 
+                                <input type="text" class="form-control" id="nim" name="nim" required>
                             </div>
                             </div>
 

@@ -131,7 +131,9 @@
 							<th>Nama</th>
 							<th>Pendidikan</th>
 							<th>Asal Sekolah/ Universitas</th>
+							<th>Fakultas</th>
 							<th>Jurusan</th>
+							<th>NIM/ NIS</th>
 							<th>Email</th>
 							<th>No.Telp</th>
 							<th>CV</th>
@@ -172,7 +174,9 @@
 							?>
 							</td>
 							<td><?= $p['asal']; ?></td>
+							<td><?= $p['fakultas']; ?></td>
 							<td><?= $p['jurusan']; ?></td>
+							<td><?= $p['nim']; ?></td>
 							<td><?= $p['email']; ?></td>
 							<td><?= $p['notelp']; ?></td>
 							<td><a href="<?= base_url('upload/' . $p['cv']) ?>" onclick="window.open(this.href, '_blank', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;">Lihat</a></td>
@@ -282,7 +286,9 @@
 							<th>Nama</th>
 							<th>Pendidikan</th>
 							<th>Asal Sekolah/ Universitas</th>
-							<th>Jurusan</th>
+                            <th>Fakultas</th>
+                            <th>Jurusan</th>
+                            <th>NIM/ NIS</th>
 							<th>Email</th>
 							<th>No.Telp</th>
 							<th>CV</th>
@@ -317,7 +323,9 @@
 							<th>Nama</th>
 							<th>Pendidikan</th>
 							<th>Asal Sekolah/ Universitas</th>
-							<th>Jurusan</th>
+                            <th>Fakultas</th>
+                            <th>Jurusan</th>
+                            <th>NIM/ NIS</th>
 							<th>Email</th>
 							<th>No.Telp</th>
 							<th>CV</th>
@@ -357,7 +365,9 @@
 							?>
 							</td>
 							<td><?= $j['asal']; ?></td>
+							<td><?= $j['fakultas']; ?></td>
 							<td><?= $j['jurusan']; ?></td>
+							<td><?= $j['nim']; ?></td>
 							<td><?= $j['email']; ?></td>
 							<td><?= $j['notelp']; ?></td>
 							<td><a href="<?= base_url('upload/' . $j['cv']) ?>" onclick="window.open(this.href, '_blank', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;">Lihat</a></td>
@@ -374,7 +384,9 @@
 							<th>Nama</th>
 							<th>Pendidikan</th>
 							<th>Asal Sekolah/ Universitas</th>
-							<th>Jurusan</th>
+                            <th>Fakultas</th>
+                            <th>Jurusan</th>
+                            <th>NIM/ NIS</th>
 							<th>Email</th>
 							<th>No.Telp</th>
 							<th>CV</th>
@@ -424,8 +436,16 @@
                                 <input type="text" class="form-control" id="asal" name="asal" required>
                             </div>
                             <div class="form-group">
+                                <label for="exampleFormControlInput1">Fakultas <label class="text-danger">*</label></label> 
+                                <input type="text" class="form-control" id="fakultas" name="fakultas" required>
+                            </div>
+                            <div class="form-group">
                                 <label for="exampleFormControlInput1">Jurusan <label class="text-danger">*</label></label> 
                                 <input type="text" class="form-control" id="jurusan" name="jurusan" required>
+                            </div>
+							<div class="form-group">
+                                <label for="exampleFormControlInput1">NIM/ NIS <label class="text-danger">*</label></label> 
+                                <input type="text" class="form-control" id="nim" name="nim" required>
                             </div>
                             </div>
 

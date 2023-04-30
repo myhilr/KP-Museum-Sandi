@@ -14,6 +14,10 @@
                                             <tr>
                                                 <th>Tanggal</th>
                                                 <th>Asal Sekolah/ Universitas</th>
+                                                <th>Fakultas</th>
+                                                <th>Jurusan</th>
+                                                <th>NIM/ NIS</th>
+                                                <th>Asal Sekolah/ Universitas</th>
                                                 <th>Nama</th>
                                                 <th>Email</th>
                                                 <th>No. Telepon</th>
@@ -29,7 +33,9 @@
                                             <tr>
                                                 <td><?= $p['tgl']; ?></td>
                                                 <td><?= $p['asal']; ?></td>
-                    
+                                                <td><?= $p['fakultas']; ?></td>
+                                                <td><?= $p['jurusan']; ?></td>
+                                                <td><?= $p['nim']; ?></td>
                                                 <td><?= $p['nama']; ?></td>
                                                 <td><?= $p['email']; ?></td>
                                                 <td><?= $p['notelp']; ?></td>

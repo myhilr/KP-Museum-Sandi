@@ -38,11 +38,11 @@
                         <hr class="divider my-4" />
                     </div>
                     <div class="col-lg-12 align-self-baseline ">
-                       <a class="btn btn-primary btn-xl js-scroll-trigger" href="<?= base_url() ?>home/sosmed.php">Beranda</a>
+                       <!-- <a class="btn btn-primary btn-xl js-scroll-trigger" href="<?= base_url() ?>home/index">Beranda</a> -->
                        <a class="btn btn-primary btn-xl js-scroll-trigger ml-3" href="<?= base_url() ?>home/pengajuan">Pengajuan Magang</a>
                        <a class="btn btn-primary btn-xl js-scroll-trigger ml-3" href="<?= base_url() ?>home/cekstatus">Cek Status</a>
                        <a class="btn btn-primary btn-xl js-scroll-trigger ml-3" href="<?= base_url() ?>home/ketentuan">Ketentuan</a>
-                       <!-- <a class="btn btn-primary btn-xl js-scroll-trigger ml-3" href="<?= base_url() ?>home/sosmed">Kontak & Sosial Media</a> -->
+                       <a class="btn btn-primary btn-xl js-scroll-trigger ml-3" href="<?= base_url() ?>home/sosmed">Kontak & Sosial Media</a>
                     </div>
                 </div>
             </div>

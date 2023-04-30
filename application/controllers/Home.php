@@ -30,6 +30,12 @@ class Home extends CI_Controller {
         $this->load->view("home/jadwal.php");
     }
 
+    public function sosmed()
+    {
+        $this->load->view("home/topnavbar_home.php");
+        $this->load->view("home/sosmed.php");
+    }
+
     public function pengajuan()
     {
         $this->load->view("home/topnavbar_home.php");
