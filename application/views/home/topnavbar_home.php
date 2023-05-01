@@ -23,7 +23,7 @@
     
     <nav class="sb-navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="row">
-            <div class="column ml-3"> <div class="ml-3"><a href="<?= base_url() ?>home"><img src="<?php echo base_url()?>asset/images/Logo-Museum.png" width="180" height="80"></a></div></div>
+            <div class="column ml-3"> <div class="ml-3"><a href="<?= base_url() ?>"><img src="<?php echo base_url()?>asset/images/Logo-Museum.png" width="180" height="80"></a></div></div>
             <div class="column ml-3">
                 <ul class="navbar-nav text-uppercase d-flex justify-content-center mt-3">
                         <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="<?= base_url() ?>home/jadwal"><b>Jadwal</a></li> -->

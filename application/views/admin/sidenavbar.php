@@ -10,7 +10,7 @@
                 <nav class="sb-sidenav accordion sb-sidenav-light" id="sidenavAccordion">
                     <div class="sb-sidenav-menu">
                         <div class="nav">
-                            <div class="sb-sidenav-menu-heading ml-3"><img src="<?php echo base_url()?>asset/images/Logo-Museum.png" width="180" height="80"></div>
+                            <div class="sb-sidenav-menu-heading ml-3"><a href="<?= base_url() ?>"><img src="<?php echo base_url()?>asset/images/Logo-Museum.png" width="180" height="80"></a></div>
                             <a class="nav-link" href="<?php echo base_url('dashboard');?>">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                Dashboard

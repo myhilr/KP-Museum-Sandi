@@ -16,7 +16,7 @@
                     <div class="card-body">
                     <form action="<?php echo base_url('home/hasil')?>" action="GET">
                         <div class="row ml-0">
-                            <div class="column"><input type="text" class="form-control" id="cari" name="cari" placeholder="masukan email" required="required"></div>
+                            <div class="column"><input type="text" class="form-control" id="cari" name="cari" placeholder="masukan email atau nomor telepon" required="required"></div>
                             <div class="column ml-2"> <button type="submit"  class="btn btn-primary mb-2">Cek</button></div>
                         </div>
                     </form>

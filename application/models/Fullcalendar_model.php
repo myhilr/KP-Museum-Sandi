@@ -89,6 +89,9 @@ class Fullcalendar_model extends CI_Model
 	{
 		$surat_balasan = $data['surat_balasan']['file_name'] ;
 		$this->db->query("UPDATE permohonan SET status=2, surat_balasan='$surat_balasan' WHERE id=$id");
+
+		$this->db->query("INSERT INTO jadwal_dec (id_permohonan) SELECT (id) FROM permohonan WHERE id = $id");
+		$this->db->query("UPDATE jadwal_dec SET tanggal_decline=now() WHERE id_permohonan=$id");
 	}
 }
 

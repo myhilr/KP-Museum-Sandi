@@ -113,9 +113,10 @@ class Data_model extends CI_Model{
 	public function listing_decline()
 	{
 		$this->db->select('*');
-		$this->db->from('permohonan');
-		$this->db->order_by('id', 'ASC');
-		$this->db->where('status', 2);
+		$this->db->from('jadwal_dec');
+		$this->db->join('permohonan','permohonan.id=jadwal_dec.id_permohonan');
+		$this->db->order_by('id_permohonan', 'ASC');
+		// $this->db->where('status', 2);
 		$query = $this->db->get();
 		return $query->result();
 	}

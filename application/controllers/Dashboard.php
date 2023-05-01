@@ -155,6 +155,8 @@ class Dashboard extends CI_Controller {
                     'notelp' 	=> $pengajuan[0]['notelp'],
                     'pendidikan'=> $pengajuan[0]['pendidikan'],
                     'jurusan' 	=> $pengajuan[0]['jurusan'],
+                    'fakultas' 	=> $pengajuan[0]['fakultas'],
+                    'nim' 	    => $pengajuan[0]['nim'],
                     'mulai' 	=> $pengajuan[0]['mulai'],
                     'akhir' 	=> $pengajuan[0]['akhir'],
                     'status' 	=> $pengajuan[0]['status'],
@@ -260,7 +262,7 @@ class Dashboard extends CI_Controller {
 
 		$pengajuan = $this->data_model->getPostByID2($id);
 		$data["a"] = $pengajuan;
-		$pengajuan[0]['status'] = 1;
+		$pengajuan[0]['status'] = 2;
 
 		if($this->upload->do_upload('surat_balasan')) {
             $file_surat_balasan = $this->upload->data();
@@ -445,7 +447,7 @@ class Dashboard extends CI_Controller {
         }
 
         // Rename worksheet
-        $spreadsheet->getActiveSheet()->setTitle('Rekapan Jadwal'.date('d-m-Y H'));
+        $spreadsheet->getActiveSheet()->setTitle('Rekapan Jadwal Diterima'.date('d-m-Y H'));
 
         // Set active sheet index to the first sheet, so Excel opens this as the first sheet
         $spreadsheet->setActiveSheetIndex(0);
@@ -480,7 +482,7 @@ class Dashboard extends CI_Controller {
         $spreadsheet->setActiveSheetIndex(0)
         ->setCellValue('A1', 'NO.')
         ->setCellValue('B1', 'TANGGAL PENGAJUAN')
-        ->setCellValue('C1', 'TANGGAL DITERIMA')
+        ->setCellValue('C1', 'TANGGAL DITOLAK')
         ->setCellValue('D1', 'TANGGAL Mulai')
         ->setCellValue('E1', 'TANGGAL Berakhir')
         ->setCellValue('F1', 'NAMA')
@@ -499,7 +501,7 @@ class Dashboard extends CI_Controller {
         $spreadsheet->setActiveSheetIndex(0)
      	->setCellValue('A'.$i, $j)
         ->setCellValue('B'.$i, $sp->tgl)
-        ->setCellValue('C'.$i, $sp->tanggal_approve)
+        ->setCellValue('C'.$i, $sp->tanggal_decline)
         ->setCellValue('D'.$i, $sp->mulai)
         ->setCellValue('E'.$i, $sp->akhir)
         ->setCellValue('F'.$i, $sp->nama)
@@ -559,14 +561,17 @@ class Dashboard extends CI_Controller {
         $spreadsheet->setActiveSheetIndex(0)
         ->setCellValue('A1', 'NO.')
         ->setCellValue('B1', 'TANGGAL PENGAJUAN')
-        ->setCellValue('G1', 'PENDIDIKAN')
-        ->setCellValue('H1', 'Asal Sekolah/ Universitas')
-        ->setCellValue('F1', 'NAMA')
-        ->setCellValue('I1', 'EMAIL')
-        ->setCellValue('J1', 'NO. TELEPON')
+        ->setCellValue('C1', 'TANGGAL DITERIMA')
         ->setCellValue('D1', 'TANGGAL Mulai')
         ->setCellValue('E1', 'TANGGAL Berakhir')
-        ->setCellValue('C1', 'TANGGAL DITERIMA')
+        ->setCellValue('F1', 'NAMA')
+        ->setCellValue('G1', 'PENDIDIKAN')
+        ->setCellValue('H1', 'Asal Sekolah/ Universitas')
+        ->setCellValue('I1', 'Fakultas')
+        ->setCellValue('J1', 'Jurusan')
+        ->setCellValue('K1', 'NIM')
+        ->setCellValue('L1', 'EMAIL')
+        ->setCellValue('M1', 'NO. TELEPON')
         ;
 
         // Miscellaneous glyphs, UTF-8
@@ -575,14 +580,17 @@ class Dashboard extends CI_Controller {
         $spreadsheet->setActiveSheetIndex(0)
         ->setCellValue('A'.$i, $j)
         ->setCellValue('B'.$i, $sp->tgl)
-        ->setCellValue('G'.$i, $sp->pendidikan)
-        ->setCellValue('H'.$i, $sp->asal)
-        ->setCellValue('F'.$i, $sp->nama)
-        ->setCellValue('I'.$i, $sp->email)
-        ->setCellValue('J'.$i, $sp->notelp)
+        ->setCellValue('C'.$i, $sp->tanggal_approve)
         ->setCellValue('D'.$i, $sp->mulai)
         ->setCellValue('E'.$i, $sp->akhir)
-        ->setCellValue('C'.$i, $sp->tanggal_approve)
+        ->setCellValue('F'.$i, $sp->nama)
+        ->setCellValue('G'.$i, $sp->asal)
+        ->setCellValue('H'.$i, $sp->pendidikan)
+        ->setCellValue('I'.$i, $sp->fakultas)
+        ->setCellValue('J'.$i, $sp->jurusan)
+        ->setCellValue('K'.$i, $sp->nim)
+        ->setCellValue('L'.$i, $sp->email)
+        ->setCellValue('M'.$i, $sp->notelp)
         ;
         $j++;
         $i++;
@@ -632,14 +640,17 @@ class Dashboard extends CI_Controller {
         $spreadsheet->setActiveSheetIndex(0)
         ->setCellValue('A1', 'NO.')
         ->setCellValue('B1', 'TANGGAL PENGAJUAN')
-        ->setCellValue('G1', 'PENDIDIKAN')
-        ->setCellValue('H1', 'Asal Sekolah/ Universitas')
-        ->setCellValue('F1', 'NAMA')
-        ->setCellValue('I1', 'EMAIL')
-        ->setCellValue('J1', 'NO. TELEPON')
+        ->setCellValue('C1', 'TANGGAL DITERIMA')
         ->setCellValue('D1', 'TANGGAL Mulai')
         ->setCellValue('E1', 'TANGGAL Berakhir')
-        ->setCellValue('C1', 'TANGGAL DITERIMA')
+        ->setCellValue('F1', 'NAMA')
+        ->setCellValue('G1', 'PENDIDIKAN')
+        ->setCellValue('H1', 'Asal Sekolah/ Universitas')
+        ->setCellValue('I1', 'Fakultas')
+        ->setCellValue('J1', 'Jurusan')
+        ->setCellValue('K1', 'NIM')
+        ->setCellValue('L1', 'EMAIL')
+        ->setCellValue('M1', 'NO. TELEPON')
         ;
 
         // Miscellaneous glyphs, UTF-8
@@ -648,14 +659,17 @@ class Dashboard extends CI_Controller {
         $spreadsheet->setActiveSheetIndex(0)
         ->setCellValue('A'.$i, $j)
         ->setCellValue('B'.$i, $sp->tgl)
-        ->setCellValue('G'.$i, $sp->pendidikan)
-        ->setCellValue('H'.$i, $sp->asal)
-        ->setCellValue('F'.$i, $sp->nama)
-        ->setCellValue('I'.$i, $sp->email)
-        ->setCellValue('J'.$i, $sp->notelp)
+        ->setCellValue('C'.$i, $sp->tanggal_approve)
         ->setCellValue('D'.$i, $sp->mulai)
         ->setCellValue('E'.$i, $sp->akhir)
-        ->setCellValue('C'.$i, $sp->tanggal_approve)
+        ->setCellValue('F'.$i, $sp->nama)
+        ->setCellValue('G'.$i, $sp->asal)
+        ->setCellValue('H'.$i, $sp->pendidikan)
+        ->setCellValue('I'.$i, $sp->fakultas)
+        ->setCellValue('J'.$i, $sp->jurusan)
+        ->setCellValue('K'.$i, $sp->nim)
+        ->setCellValue('L'.$i, $sp->email)
+        ->setCellValue('M'.$i, $sp->notelp)
         ;
         $j++;
         $i++;
@@ -705,14 +719,17 @@ class Dashboard extends CI_Controller {
         $spreadsheet->setActiveSheetIndex(0)
         ->setCellValue('A1', 'NO.')
         ->setCellValue('B1', 'TANGGAL PENGAJUAN')
-        ->setCellValue('G1', 'PENDIDIKAN')
-        ->setCellValue('H1', 'Asal Sekolah/ Universitas')
-        ->setCellValue('F1', 'NAMA')
-        ->setCellValue('I1', 'EMAIL')
-        ->setCellValue('J1', 'NO. TELEPON')
+        ->setCellValue('C1', 'TANGGAL DITERIMA')
         ->setCellValue('D1', 'TANGGAL Mulai')
         ->setCellValue('E1', 'TANGGAL Berakhir')
-        ->setCellValue('C1', 'TANGGAL DITERIMA')
+        ->setCellValue('F1', 'NAMA')
+        ->setCellValue('G1', 'PENDIDIKAN')
+        ->setCellValue('H1', 'Asal Sekolah/ Universitas')
+        ->setCellValue('I1', 'Fakultas')
+        ->setCellValue('J1', 'Jurusan')
+        ->setCellValue('K1', 'NIM')
+        ->setCellValue('L1', 'EMAIL')
+        ->setCellValue('M1', 'NO. TELEPON')
         ;
 
         // Miscellaneous glyphs, UTF-8
@@ -721,14 +738,17 @@ class Dashboard extends CI_Controller {
         $spreadsheet->setActiveSheetIndex(0)
         ->setCellValue('A'.$i, $j)
         ->setCellValue('B'.$i, $sp->tgl)
-        ->setCellValue('G'.$i, $sp->pendidikan)
-        ->setCellValue('H'.$i, $sp->asal)
-        ->setCellValue('F'.$i, $sp->nama)
-        ->setCellValue('I'.$i, $sp->email)
-        ->setCellValue('J'.$i, $sp->notelp)
+        ->setCellValue('C'.$i, $sp->tanggal_approve)
         ->setCellValue('D'.$i, $sp->mulai)
         ->setCellValue('E'.$i, $sp->akhir)
-        ->setCellValue('C'.$i, $sp->tanggal_approve)
+        ->setCellValue('F'.$i, $sp->nama)
+        ->setCellValue('G'.$i, $sp->asal)
+        ->setCellValue('H'.$i, $sp->pendidikan)
+        ->setCellValue('I'.$i, $sp->fakultas)
+        ->setCellValue('J'.$i, $sp->jurusan)
+        ->setCellValue('K'.$i, $sp->nim)
+        ->setCellValue('L'.$i, $sp->email)
+        ->setCellValue('M'.$i, $sp->notelp)
         ;
         $j++;
         $i++;
