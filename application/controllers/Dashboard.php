@@ -283,6 +283,7 @@ class Dashboard extends CI_Controller {
 				'status' 	=> $pengajuan[0]['status'],
 				'surat_balasan' => $file_surat_balasan
 			);
+        }
 
 	// 		if($this->fullcalendar_model->decline_permohonan($data, $id)) {
 	// 			$this->session->set_flashdata('success', '<p>Berhasil melakukan penolakan <strong></strong></p>');
