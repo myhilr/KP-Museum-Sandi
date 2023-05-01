@@ -276,23 +276,25 @@ class Dashboard extends CI_Controller {
 				'notelp' 	=> $pengajuan[0]['notelp'],
 				'pendidikan'=> $pengajuan[0]['pendidikan'],
 				'jurusan' 	=> $pengajuan[0]['jurusan'],
+                'fakultas' 	=> $pengajuan[0]['fakultas'],
+                'nim' 	    => $pengajuan[0]['nim'],
 				'mulai' 	=> $pengajuan[0]['mulai'],
 				'akhir' 	=> $pengajuan[0]['akhir'],
 				'status' 	=> $pengajuan[0]['status'],
 				'surat_balasan' => $file_surat_balasan
 			);
 
-			if($this->fullcalendar_model->decline_permohonan($data, $id)) {
-				$this->session->set_flashdata('success', '<p>Berhasil melakukan penolakan <strong></strong></p>');
-		   	} else {
-				$this->session->set_flashdata('error', '<p>Gagal melakukan penolakan <strong></strong></p>');
-		   	}
+	// 		if($this->fullcalendar_model->decline_permohonan($data, $id)) {
+	// 			$this->session->set_flashdata('success', '<p>Berhasil melakukan penolakan <strong></strong></p>');
+	// 	   	} else {
+	// 			$this->session->set_flashdata('error', '<p>Gagal melakukan penolakan <strong></strong></p>');
+	// 	   	}
 
-			redirect(base_url('dashboard?status=sucess'));
-		} else {
-			$this->session->set_flashdata('error', $this->upload->display_errors());
-			redirect(base_url('dashboard?status=failed'));
-	   }
+	// 		redirect(base_url('dashboard?status=sucess'));
+	// 	} else {
+	// 		$this->session->set_flashdata('error', $this->upload->display_errors());
+	// 		redirect(base_url('dashboard?status=failed'));
+	//    }
 
 		//$this->data_model->approve_permohonan($id);
         //redirect(base_url() . "dashboard");
@@ -359,8 +361,9 @@ class Dashboard extends CI_Controller {
 
         // // Tampilkan pesan sukses atau error
         // if ($this->email->send()) {
-        //     $this->data_model->approve_permohonan($id);
-        //     redirect(base_url() . "dashboard?msg=approve_berhasil");
+            $this->fullcalendar_model->decline_permohonan($data, $id);
+            $this->session->set_flashdata('success', '<p>Berhasil melakukan penolakan <strong></strong></p>');
+            redirect(base_url('dashboard?status=sucess'));
         // } else {
         //     redirect(base_url() . "dashboard?msg=approve_gagal");
         // }
