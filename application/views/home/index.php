@@ -31,12 +31,26 @@
 <body>
             <div class="container">
                 <div class="row my-auto mt-5 pt-5">
-                    <div class="col-lg-8 align-self-end mt-5 pt-5 ">
+                <div class="col-lg-8 align-self-end mt-5 pt-5 ">
+                <div class="container">
+  <div class="row">
+    <div class="col-md-auto">
+    <img src="<?php echo base_url()?>asset/images/Logo-Museum.png"  width="500" height="222" style="float: left; padding-right: 15px; padding-top: 15px;" />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-auto">
+    <h1 class="text-uppercase text-blue font-weight-bold">PENDAFTARAN PESERTA MAGANG<br>MUSEUM SANDI</h1>
+    <hr class="divider my-4" />    
+    </div>
+  </div>
+</div></div>
+                    <!-- <div class="col-lg-8 align-self-end mt-5 pt-5 ">
                     <img src="<?php echo base_url()?>asset/images/Logo-Museum.png"  width="500" height="222" style="float: left; padding-right: 15px; padding-top: 15px;" />
                    
                         <h1 class="text-uppercase text-blue font-weight-bold">PENDAFTARAN PESERTA MAGANG<br>MUSEUM SANDI</h1>
                         <hr class="divider my-4" />
-                    </div>
+                    </div> -->
                     <div class="col-lg-12 align-self-baseline ">
                        <!-- <a class="btn btn-primary btn-xl js-scroll-trigger" href="<?= base_url() ?>home/index">Beranda</a> -->
                        <a class="btn btn-primary btn-xl js-scroll-trigger ml-3" href="<?= base_url() ?>home/pengajuan">Pengajuan Magang</a>
