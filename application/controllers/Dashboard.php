@@ -242,7 +242,7 @@ class Dashboard extends CI_Controller {
             // if ($this->email->send()) {
                 $this->fullcalendar_model->approve_permohonan($data, $id);
                 $this->session->set_flashdata('success', '<p>Berhasil melakukan persetujuan <strong></strong></p>');
-                redirect(base_url('dashboard'));
+                redirect(base_url('dashboard?status=approve'));
             // } else {
             //     $this->session->set_flashdata('error', '<p>Gagal melakukan persetujuan <strong></strong></p>');
             //     $this->session->set_flashdata('error', $this->upload->display_errors());
@@ -364,7 +364,7 @@ class Dashboard extends CI_Controller {
         // if ($this->email->send()) {
             $this->fullcalendar_model->decline_permohonan($data, $id);
             $this->session->set_flashdata('success', '<p>Berhasil melakukan penolakan <strong></strong></p>');
-            redirect(base_url('dashboard?status=sucess'));
+            redirect(base_url('dashboard?status=decline'));
         // } else {
         //     redirect(base_url() . "dashboard?msg=approve_gagal");
         // }
