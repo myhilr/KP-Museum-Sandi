@@ -1,4 +1,4 @@
-<div class="card-body">
+<!-- <div class="card-body">
     <div class="container-fluid">
     <h1 class="mt-4 mb-4"><b>Pendopo Kecamatan</b></h1>
                         <ol class="breadcrumb mb-4">
@@ -66,4 +66,4 @@
                     }
                 );
             });
-</script>
+</script> -->

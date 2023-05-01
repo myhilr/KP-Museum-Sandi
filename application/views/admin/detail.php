@@ -76,8 +76,8 @@
                                                 <td>: <?= $j['notelp']; ?></td>
                                             </tr>
                                             <tr>
-                                                <th>Tanggal Pengajuan</th>
-                                                <td>: <?= $j['tgl']; ?></td>
+                                                <th>Tanggal Diterima</th>
+                                                <td>: <?= $j['tanggal_approve']; ?></td>
                                             </tr>
                                             <tr>
                                                 <th>Tanggal Mulai</th>
