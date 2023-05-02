@@ -26,7 +26,7 @@
     </div>
     <div class="col align-self-center">
     <div class="semibold">
-    <h4 style="margin-bottom:0;"><b>SISTEM PENDAFTARAN <br>KARYAWAN MAGANG</h4> <h4 style="margin : 0; padding-top:0;">MUSEUM SANDI</b></h4><br>
+    <h4 style="margin-bottom:0;"><b>SISTEM PENDAFTARAN <br>PESERTA MAGANG</h4> <h4 style="margin : 0; padding-top:0;">MUSEUM SANDI</b></h4><br>
     </div>    
 </div>
     <!-- <div class="col align-self-end">

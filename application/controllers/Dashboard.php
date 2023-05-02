@@ -451,7 +451,7 @@ class Dashboard extends CI_Controller {
         }
 
         // Rename worksheet
-        $spreadsheet->getActiveSheet()->setTitle('Rekapan Jadwal Diterima'.date('d-m-Y H'));
+        $spreadsheet->getActiveSheet()->setTitle('Rekapan Jadwal'.date('d-m-Y H'));
 
         // Set active sheet index to the first sheet, so Excel opens this as the first sheet
         $spreadsheet->setActiveSheetIndex(0);

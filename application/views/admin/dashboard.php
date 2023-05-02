@@ -116,7 +116,7 @@
 	<div class="card mb-4">
 		<div class="card-header">
 			<i class="fas fa-table mr-1"></i>
-			Permohonan Pendaftaran Karyawan Magang Terbaru
+			Permohonan Pendaftaran Peserta Magang Terbaru
 		</div>
 
 		<div class="card-body">
@@ -307,7 +307,7 @@
 	<div class="card mb-4">
 		<div class="card-header">
 			<i class="fas fa-table mr-1"></i>
-			Daftar Karyawan Magang
+			Daftar Peserta Magang
 		</div>
 		<div class="card-body">
 			<div class="custom-btn-group">
