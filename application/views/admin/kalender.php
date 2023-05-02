@@ -26,7 +26,7 @@
 
 <div class="card-body">
     <div class="container-fluid">
-		<h1 class="mt-4 mb-4"><b>JADWAL KARYAWAN MANGANG</b></h1>
+		<h1 class="mt-4 mb-4"><b>JADWAL KARYAWAN MAGANG</b></h1>
 		<ol class="breadcrumb mb-4">
 			<li class="breadcrumb-item"><a href="<?php echo base_url('dashboard');?>">Dashboard</a></li>
 			<li class="breadcrumb-item active">Kalender</li>

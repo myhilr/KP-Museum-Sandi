@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>KP</title>
+<title>Login Admin</title>
 <link rel = "icon" href = "<?php echo base_url()?>asset/images/Logo-Museum.png" type = "image/x-icon"> 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>asset/css/font.css">
