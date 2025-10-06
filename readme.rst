@@ -7,19 +7,18 @@ Project ini dibuat sebagai bagian dari kerja praktek dengan fokus pada backend &
 
 ## 📸 Preview
 
-![Preview Aplikasi]
 ### Home
-(lpfix.jpg)
+![Preview](lpfix.jpg)
 ### Pengajuan magang
-(pengajuan_magang_fix.jpg)
+![Preview](pengajuan_magang_fix.jpg)
 ### Cek status peserta magang
-(cek.jpg)
+![Preview](cek.jpg)
 ### Syarat dan ketentuan
-(ketentuan.jpg)
+![Preview](ketentuan.jpg)
 ### Login admin
-(login.jpg)
+![Preview](login.jpg)
 ### Dashboard admin
-(dashboard.jpg)
+![Preview](dashboard.jpg)
 
 ---
 
