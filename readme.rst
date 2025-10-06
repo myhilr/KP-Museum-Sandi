@@ -59,8 +59,6 @@ Dashboard admin
 
 Upload dokumen
 
-Notifikasi email
-
 ---
 
 ## 🚀 Cara Install & Menjalankan
