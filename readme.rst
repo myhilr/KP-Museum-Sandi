@@ -8,22 +8,22 @@ Project ini dibuat sebagai bagian dari kerja praktek dengan fokus pada backend &
 ## 📸 Preview
 
 ### Home
-![alt text](https://github.com/myhilr/KP-Museum-Sandi/blob/main/asset/lpfix.jpg?raw=true)
+![image alt](https://github.com/myhilr/KP-Museum-Sandi/blob/main/asset/lpfix.jpg?raw=true)
 
 ### Pengajuan magang
-![alt text](https://github.com/myhilr/KP-Museum-Sandi/blob/main/asset/pengajun_magang_fix.jpg?raw=true)
+![image alt](https://github.com/myhilr/KP-Museum-Sandi/blob/main/asset/pengajun_magang_fix.jpg?raw=true)
 
 ### Cek status peserta magang
-![alt text](https://github.com/myhilr/KP-Museum-Sandi/blob/main/asset/cek.jpg?raw=true)
+![image alt](https://github.com/myhilr/KP-Museum-Sandi/blob/main/asset/cek.jpg?raw=true)
 
 ### Syarat dan ketentuan
-![alt text](https://github.com/myhilr/KP-Museum-Sandi/blob/main/asset/ketentuan.jpg?raw=true)
+![image alt](https://github.com/myhilr/KP-Museum-Sandi/blob/main/asset/ketentuan.jpg?raw=true)
 
 ### Login admin
-![alt text](https://github.com/myhilr/KP-Museum-Sandi/blob/main/asset/login.jpg?raw=true)
+![image alt](https://github.com/myhilr/KP-Museum-Sandi/blob/main/asset/login.jpg?raw=true)
 
 ### Dashboard admin
-![alt text](https://github.com/myhilr/KP-Museum-Sandi/blob/main/asset/dashboard.jpg?raw=true)
+![image alt](https://github.com/myhilr/KP-Museum-Sandi/blob/main/asset/dashboard.jpg?raw=true)
 
 ---
 
