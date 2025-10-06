@@ -1,3 +1,36 @@
+# Aplikasi Pendaftaran Peserta Magang Museum Sandi (CodeIgniter 3)
+
+Aplikasi berbasis web untuk mengelola **pendaftaran peserta magang Museum Sandi**, dikembangkan menggunakan **CodeIgniter 3** dan **MySQL**.  
+Project ini dibuat sebagai bagian dari kerja praktek dengan fokus pada backend & integrasi database.
+
+---
+
+## 📸 Preview
+
+![Preview Aplikasi]
+### Home
+(lpfix.jpg)
+### Pengajuan magang
+(pengajuan_magang_fix.jpg)
+### Cek status peserta magang
+(cek.jpg)
+### Syarat dan ketentuan
+(ketentuan.jpg)
+### Login admin
+(login.jpg)
+### Dashboard admin
+(dashboard.jpg)
+
+---
+
+## 🚀 Cara Install & Menjalankan
+
+### 1. Clone Repository
+```bash
+git clone https://github.com/myhilr/KP-Museum-Sandi.git
+cd KP-Museum-Sandi
+
+
 ###################
 What is CodeIgniter
 ###################
