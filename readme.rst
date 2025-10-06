@@ -8,17 +8,22 @@ Project ini dibuat sebagai bagian dari kerja praktek dengan fokus pada backend &
 ## 📸 Preview
 
 ### Home
-![Preview](./asset/lpfix.jpg)
+![alt text](https://github.com/myhilr/KP-Museum-Sandi/blob/main/asset/lpfix.jpg?raw=true)
+
 ### Pengajuan magang
-![Preview](./asset/pengajuan_magang_fix.jpg)
+![alt text](https://github.com/myhilr/KP-Museum-Sandi/blob/main/asset/pengajun_magang_fix.jpg?raw=true)
+
 ### Cek status peserta magang
-![Preview](./asset/cek.jpg)
+![alt text](https://github.com/myhilr/KP-Museum-Sandi/blob/main/asset/cek.jpg?raw=true)
+
 ### Syarat dan ketentuan
-![Preview](./asset/ketentuan.jpg)
+![alt text](https://github.com/myhilr/KP-Museum-Sandi/blob/main/asset/ketentuan.jpg?raw=true)
+
 ### Login admin
-![Preview](./asset/login.jpg)
+![alt text](https://github.com/myhilr/KP-Museum-Sandi/blob/main/asset/login.jpg?raw=true)
+
 ### Dashboard admin
-![Preview](./asset/dashboard.jpg)
+![alt text](https://github.com/myhilr/KP-Museum-Sandi/blob/main/asset/dashboard.jpg?raw=true)
 
 ---
 
