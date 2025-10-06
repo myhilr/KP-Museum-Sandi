@@ -9,108 +9,111 @@ Project ini dibuat sebagai bagian dari kerja praktek dengan fokus pada backend &
 
 ### Home
 
-![image URL](https://github.com/myhilr/KP-Museum-Sandi/blob/main/asset/lpfix.jpg?raw=true)
+.. image:: ./asset/lpfix.jpg
+   :alt: Halaman utama
+   :width: 600px
+   :align: center
 
 ### Pengajuan magang
 
-![image URL](https://github.com/myhilr/KP-Museum-Sandi/blob/main/asset/pengajun_magang_fix.jpg?raw=true)
+.. image:: ./asset/pengajun_magang_fix.jpg
+   :alt: Halaman pengajuan magang
+   :width: 600px
+   :align: center
 
 ### Cek status peserta magang
 
-![image URL](https://github.com/myhilr/KP-Museum-Sandi/blob/main/asset/cek.jpg?raw=true)
+.. image:: ./asset/cek.jpg
+   :alt: Halaman cek status
+   :width: 600px
+   :align: center
 
 ### Syarat dan ketentuan
 
-![image URL](https://github.com/myhilr/KP-Museum-Sandi/blob/main/asset/ketentuan.jpg?raw=true)
+.. image:: ./asset/ketentuan.jpg
+   :alt: Halaman syarat ketentuan
+   :width: 600px
+   :align: center
 
 ### Login admin
 
-![image URL](https://github.com/myhilr/KP-Museum-Sandi/blob/main/asset/login.jpg?raw=true)
+.. image:: ./asset/login.jpg
+   :alt: Login admin
+   :width: 600px
+   :align: center
 
 ### Dashboard admin
 
-![image URL](https://github.com/myhilr/KP-Museum-Sandi/blob/main/asset/dashboard.jpg?raw=true)
+.. image:: ./asset/dashboard.jpg
+   :alt: Dashboard admin
+   :width: 600px
+   :align: center
+
+---
+
+Fitur
+
+Pendaftaran peserta
+
+Dashboard admin
+
+Upload dokumen
+
+Notifikasi email
 
 ---
 
 ## 🚀 Cara Install & Menjalankan
 
-### 1. Clone Repository
+🚀 Clone repositori:
 
-```bash
+git clone https://github.com/username/nama-proyek.git
 
-git clone https://github.com/myhilr/KP-Museum-Sandi.git
-
-cd KP-Museum-Sandi
+cd nama-proyek
 
 
-###################
-What is CodeIgniter
-###################
+🚀 Install dependencies:
 
-CodeIgniter is an Application Development Framework - a toolkit - for people
-who build web sites using PHP. Its goal is to enable you to develop projects
-much faster than you could if you were writing code from scratch, by providing
-a rich set of libraries for commonly needed tasks, as well as a simple
-interface and logical structure to access these libraries. CodeIgniter lets
-you creatively focus on your project by minimizing the amount of code needed
-for a given task.
+composer install
 
-*******************
-Release Information
-*******************
+npm install
 
-This repo contains in-development code for future releases. To download the
-latest stable release please visit the `CodeIgniter Downloads
-<https://codeigniter.com/download>`_ page.
+npm run dev
 
-**************************
-Changelog and New Features
-**************************
 
-You can find a list of all changes for each release in the `user
-guide change log <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/changelog.rst>`_.
+🚀 Salin file .env dan sesuaikan:
 
-*******************
-Server Requirements
-*******************
+cp .env.example .env
 
-PHP version 5.6 or newer is recommended.
+php artisan key:generate
 
-It should work on 5.3.7 as well, but we strongly advise you NOT to run
-such old versions of PHP, because of potential security and performance
-issues, as well as missing features.
 
-************
-Installation
-************
+🚀 Migrasi database:
 
-Please see the `installation section <https://codeigniter.com/user_guide/installation/index.html>`_
-of the CodeIgniter User Guide.
+php artisan migrate
 
-*******
-License
-*******
 
-Please see the `license
-agreement <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/license.rst>`_.
+🚀 Jalankan server:
 
-*********
-Resources
-*********
+php artisan serve
 
--  `User Guide <https://codeigniter.com/docs>`_
--  `Language File Translations <https://github.com/bcit-ci/codeigniter3-translations>`_
--  `Community Forums <http://forum.codeigniter.com/>`_
--  `Community Wiki <https://github.com/bcit-ci/CodeIgniter/wiki>`_
--  `Community Slack Channel <https://codeigniterchat.slack.com>`_
+Buka browser: http://localhost:8000
 
-Report security issues to our `Security Panel <mailto:security@codeigniter.com>`_
-or via our `page on HackerOne <https://hackerone.com/codeigniter>`_, thank you.
+---
+
+Struktur Folder
+
+/app
+
+/config
+
+/database
+
+/public
+
+/resources
+
+/routes
 
 ***************
-Acknowledgement
-***************
 
-The CodeIgniter team would like to thank EllisLab, all the
-contributors to the CodeIgniter project and you, the CodeIgniter user.
